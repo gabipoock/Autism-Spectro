@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Player com Header</title>
+  <link rel="stylesheet" href="/Styles/guia.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+  <link rel="shortcut icon" href="./Imagens/loginho.png" type="image/png">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="./Imagens/spectrologo.png" alt="Logo">
+    </div>
+    <nav class="menup">
+      <ul>
+        <li><a href="indexaluno.html">Home</a></li>
+        <li><a href="indexaluno.html">Sobre</a></li>
+        <li><a href="#">Guia</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal com o Vídeo -->
+  <div class="video-container">
+    <video id="videoPlayer" autoplay loop>
+    <source src="Imagens/videoguia.mp4" type="video/mp4">
+    <source src="Imagens/videoguia.ogg" type="video/ogg">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+   
+  <script src="/Script/guia.js"></script>
+</body>
+</html>
