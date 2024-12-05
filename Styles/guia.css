@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --light: #f9f4f4;
+    --color-text: #D000F7;
+    --box-shadow: 
+    5px 5px 15px #c1c8d3, 
+    -5px -5px 15px #ffffff;
+    --gradient-bg: linear-gradient(-45deg, #D000F7, #24BAE3);
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    background-color: #f9f4f4;
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem no fundo */
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #dce1e4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light);
+    z-index: 1;
+    font-weight: 400;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+.menup ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.menup ul li {
+    padding: 0 20px;
+}
+
+.menup ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-text); 
+    font-weight: 400;
+    transition: color 0.3s ease; 
+}
+
+.menup ul li a:hover {
+    color: rgb(20, 102, 196);
+}
+
+.menup ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: rgb(20, 102, 196); 
+    transition: width 0.3s ease;
+}
+
+.menup ul li a:hover::after {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1024px) {
+    header .navDiv {
+        display: flex;
+        justify-content: end;
+    }
+
+    header label {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+    }
+
+    header .nav {
+        position: fixed;
+        background-color: #F0F3F5;
+        z-index: 1;
+        width: 70%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 70px);
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+
+    input#menu:checked ~ .nav {
+        transform: translateX(0%);
+    }
+}
+
+/* Estilos do Container do Vídeo */
+/* Estilos do Container do Vídeo */
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 150px auto; /* Ajusta para dar espaço ao header */
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000; /* Fundo do vídeo para combinar com a estética */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Borda arredondada no vídeo */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para os controles */
+    border-radius: 5px;
+    padding: 5px; /* Menor espaço entre os botões */
+    gap: 5px; /* Espaçamento reduzido entre os botões */
+}
+
+.controls button {
+    padding: 5px 10px; /* Botões menores */
+    border: none;
+    background-color: transparent; /* Sem fundo */
+    color: var(--color-text); /* Cor da fonte do header */
+    cursor: pointer;
+    border-radius: 3px; /* Bordas arredondadas nos botões */
+    font-size: 14px; /* Tamanho de fonte reduzido */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+.controls button:hover {
+    background-color: rgba(206, 202, 199, 0.2); /* Muda a cor no hover */
+}
+
+.controls button:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Adicionando ícones aos botões */
+.controls button::before {
+    font-family: 'Font Awesome 5 Free'; /* Font Awesome para ícones */
+    font-weight: 900;
+    margin-right: 3px; /* Espaçamento entre ícone e texto */
+}

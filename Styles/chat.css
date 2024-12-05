@@ -1,0 +1,70 @@
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff9800;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Certifica-se de que fica sobre os outros elementos */
+}
+ 
+#chat-container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: rgb(242, 236, 243);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000; /* Garante que a caixa de chat fique sempre visível */
+}
+ 
+#chatbox {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+ 
+#close-chat {
+    background-color: #ff9800;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+}
+ 
+.chat-options button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+ 
+.chat-options button:hover {
+    background-color: #e68900;
+}
+ 
+#chatbox p {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    max-width: 80%;
+}
+ 
+#chatbox p:nth-child(odd) {
+      background-color: #d1ffd1;
+}

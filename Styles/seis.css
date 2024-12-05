@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+/* root values */
+:root{
+    --container-color: #1a1e21;
+    --second-color: rgb(192, 27, 207);
+    --text-color: #172317;
+    --bg-color: #eaecee;
+    --roxo: purple;
+}
+
+::selection{
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    padding: 3rem 0 2rem;
+}
+
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+a{
+    color: #fff;
+}
+
+/* Header */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: .5s;
+}
+
+header.shadow .logo{
+    color: var(--text-color);
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+.logo span{
+    color: var(--roxo);
+}
+
+.login{
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: black;
+}
+
+.login:hover{
+    background: hsl(212, 62%, 60%);
+    transition: .5s;
+}
+
+.home{
+    width: 100%;
+    min-height: 440px;
+    background: url(./img/lionking.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text{
+    color: black;
+    text-align: center;
+}
+
+.home-title{
+    font-size: 3.5rem;
+}
+
+.home-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: 'Quicksand', cursive;
+}
+
+.container {
+    max-width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.card {
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 0 0 10px rgba(0, 0, 0, .5);
+    z-index: 100
+}
+
+.card:hover {
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 0 10px rgba(0, 0, 0, .5);
+    z-index: 101;
+    cursor: pointer
+}
+
+.card .imgbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s
+}
+
+.card .imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.card:hover .imgbox {
+    transform: rotateY(-135deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px
+}
+
+.details {
+    text-align: center;
+}
+
+.link-center a {
+    color: red;
+}

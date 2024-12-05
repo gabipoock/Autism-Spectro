@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+
+:root{
+    --light: #f8fcff;
+    --color-text: #ffffff;
+    --box-shadow: 
+    5px 5px 15px #c1c8d3, 
+    -5px -5px 15px #ffffff;
+    --gradient-bg: linear-gradient(-45deg, #D000F7, #24BAE3);
+}
+a{
+    color: #D000F7;
+    text-decoration: none;
+}
+body{
+    background: #d18bd5;
+    background-image: url("https://1.bp.blogspot.com/-fd1WXKk-TAc/XyqfngP4PiI/AAAAAAAAVMw/umQz3tkxtg43uPIy8W5og6gAkpCfjaTvACLcBGAsYHQ/w1563-h1563/bg-snell.png");
+    font-family: 'Poppins', sans-serif;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #dce1e4;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: var(--light);
+    z-index: 5;
+}
+header .logo img{
+    height: 50px;
+}
+.menup ul{
+    margin: 0;
+    list-style: none;
+    height: 100%;
+
+    justify-content: end;
+    align-items: center;
+}
+.menup ul li{
+    padding: 0 30px;
+}
+
+.conteiner{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.slider-wrapper{
+   overflow: hidden; 
+   max-width: 1100px;
+}
+
+.card-list .card-item {
+    color: #ffffff;
+    padding: 10px;
+    width: 250px;
+    height: 400px;
+    margin: 30px 10px 45px ;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(117, 117, 117, 0.2);
+    border: 1px solid rgb(117, 117, 117, 0.5);
+}
+.card-list .card-item .user-image{
+    width: 150px ;
+    height: 150px;
+    border-radius: 50%;
+    margin: 15px 10px;
+    border: 3px solid #ffffff;
+}
+.card-list .card-item .user-escola{
+    font-size: 15px;
+    color:#ffffff;
+    margin: 10px 0;
+}
+.card-list .card-item .github{
+    font-size: 10px;
+    padding: 10px 30px;
+    color:rgba(20, 20, 20);
+    border-radius: 6px ;
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid black;
+    transition: 0.2s ease;
+    margin-top: 50px;
+}
+.card-list .card-item .github:hover{
+    background: rgba(242, 153, 202, 0.678);
+    border: 1px solid white;
+    color: #ffffff;
+}
+.swiper-pagination-bullet{
+    background: #ffffff;
+    height: 15px;
+    width: 15px;
+}
+.slider-wrapper .swiper-slide-button{
+    color: #fbf8f8;
+    transition: 0.2s ease;
+}
+.slider-wrapper .swiper-slide-button:hover{
+    color: #000;
+
+}
+.img-github{
+    width: 20px;
+    height: 20px;
+}
+@media (max-width: 768px){
+    .slider-wrapper{
+        margin: 0px 10px 0px;
+    }
+    .slider-wrapper .swiper-slide-button{
+        display: none;
+    }
+}
+.user-name{
+    font-size: 17px;
+}
+.boxgrupo{
+    align-items: center;
+    text-align: center;
+}
+.grupo {
+    margin: 50px;
+    width: 600px;
+    height: 450px;
+    border-radius: 15px; /* Borda arredondada */
+    box-shadow: 0px 8px 100px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 3px solid white; /* Borda branca */
+    overflow: hidden; /* Garante que o conteúdo interno siga o formato arredondado */
+}
+.textequipe{
+   margin: 5px 100px 10px;
+   justify-content: center;
+   text-align: justify;
+}
+.swiper-button-prev{
+    color: #ffffff;
+    margin:10px;
+}
+.swiper-button-next{
+    color: #ffffff;
+    margin:10px;
+}
+h3{
+    margin-left: 100px;
+}
